@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #fff;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      height: 24px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    position: relative;
+
+    &-input {
+      // margin-right: 16px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 296px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 272px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1rem; // Задайте размер SVG иконки
+      height: 1rem;
+      background: url("../../public/icons/search.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &-avatar {
+      display: block;
+      height: 32px;
+    }
+
+    &-name {
+      font-size: 1rem;
+    }
+
+    &-settings {
+      background: none;
+
+      width: 32px;
+      height: 32px;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+
+      border: 1px solid #d5d8dd;
+      border-radius: 4px;
+      img {
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.form {
+  &__title {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    &__label {
+      width: 100%;
+      font-weight: bold;
+    }
+
+    &__input {
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+  }
+}

@@ -10,131 +10,131 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>IT Global</title>
   </head>
-  <body>
-    <header>
-      <a href="/" aria-label="Перейти на главную страницу">
-        <img src="./public/icons/mainlogo.svg" alt="SIMPLEONE" >
+  <body >
+    <header class="header">
+      <a href="/" class="header__logo" aria-label="Перейти на главную страницу">
+          <img src="./public/icons/mainlogo.svg" alt="SIMPLEONE" class="header__logo-img">
       </a>
-      <div>
-        <input type="text" name="" id="" placeholder="Поиск" />
-        <div>
-          <img src="" alt="Лого" />
-          <span>Максим Галактионов</span>
-          <button type="button">
-            <img src="" alt="Настройки" />
-          </button>
-        </div>
+      <div class="header__search">
+          <input type="text" placeholder="Поиск" class="header__search-input" />
+          <div class="header__user">
+              <img src="./public/images/avatar.png" alt="Лого" class="header__user-avatar" />
+              <span class="header__user-name">Максим Галактионов</span>
+              <button type="button" class="header__user-settings">
+                  <img src="./public/icons/settings.svg" alt="Настройки" />
+              </button>
+          </div>
       </div>
-    </header>
-    <main>
-      <aside>
-        <div>
-          <button type="button">
+  </header>
+    <main class="main">
+      <aside class="sidebar">
+        <div class="sidebar__controls">
+          <button class="sidebar__toggle" type="button">
             <img src="" alt="открыть сайдбар" />
           </button>
-          <button type="button">
+          <button class="sidebar__favorites" type="button">
             <img src="" alt="избранное" />
           </button>
         </div>
-        <div>
-          <input type="text" name="" placeholder="Поиск по меню" />
-          <button type="button">открепить</button>
-          <ul>
-            <li>Моя работа</li>
-            <li>Структура портала</li>
-            <li>Личное расписание</li>
-            <li>Отсутствие на рабочем месте</li>
-            <li>Портфель услуг</li>
-            <li>Дашборды</li>
-            <li>Доски задач</li>
-            <li>Обращения</li>
-            <li>Инциденты</li>
-            <li>Проблемы</li>
-            <li>Настройки каталогов</li>
-            <li>Запросы на обслуживание</li>
-            <li>Запросы на изменение</li>
-            <li>Управление конфигурациями</li>
-            <li>Управление уровнем услуг</li>
-            <li>Настройка соответствий</li>
+        <div class="sidebar__menu">
+          <input class="form__input" class="sidebar__search" type="text" name="" placeholder="Поиск по меню" />
+          <button class="sidebar__unpin" type="button">открепить</button>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">Моя работа</li>
+            <li class="sidebar__item">Структура портала</li>
+            <li class="sidebar__item">Личное расписание</li>
+            <li class="sidebar__item">Отсутствие на рабочем месте</li>
+            <li class="sidebar__item">Портфель услуг</li>
+            <li class="sidebar__item">Дашборды</li>
+            <li class="sidebar__item">Доски задач</li>
+            <li class="sidebar__item">Обращения</li>
+            <li class="sidebar__item">Инциденты</li>
+            <li class="sidebar__item">Проблемы</li>
+            <li class="sidebar__item">Настройки каталогов</li>
+            <li class="sidebar__item">Запросы на обслуживание</li>
+            <li class="sidebar__item">Запросы на изменение</li>
+            <li class="sidebar__item">Управление конфигурациями</li>
+            <li class="sidebar__item">Управление уровнем услуг</li>
+            <li class="sidebar__item">Настройка соответствий</li>
           </ul>
         </div>
       </aside>
-      <section>
-        <div>
-          <div>
+      <section class="content">
+        <div class="content__header">
+          <div class="content__title">
             <h3>Подзадача</h3>
             <button type="button">Создать</button>
           </div>
-          <div>
+          <div class="content__actions">
             <button type="button">Сохранить</button>
             <button type="button">Сохранить и выйти</button>
           </div>
         </div>
-        <form>
-        <h1>
+        <form class="form">
+        <h1 class="form__title">
           STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто
           некоторые поля остаются редактируемыми для агента если он Caller
         </h1>
-          <div>
-            <label for="theme">Тема</label>
-            <input id="theme" type="text" />
-            <label for="status">Статус</label>
-            <input type="text" id="status" />
+          <div class="form__row">
+            <label class="form__label" for="theme">Тема</label>
+            <input class="form__input" id="theme" type="text" />
+            <label class="form__label" for="status">Статус</label>
+            <input class="form__input" type="text" id="status" />
           </div>
           <div>
-            <label for="description">Описание</label>
-            <input type="text" id="description" />
-            <label for="product">Продукт</label>
-            <input type="text" id="product" />
+            <label class="form__label" for="description">Описание</label>
+            <input class="form__input" type="text" id="description" />
+            <label class="form__label" for="product">Продукт</label>
+            <input class="form__input" type="text" id="product" />
           </div>
           <div>
-            <label for="notes">Рабочие заметки</label>
-            <input type="text" id="notes" />
-            <label for="priority">Приоритет</label>
-            <input type="text" id="priority" />
+            <label class="form__label" for="notes">Рабочие заметки</label>
+            <input class="form__input" type="text" id="notes" />
+            <label class="form__label" for="priority">Приоритет</label>
+            <input class="form__input" type="text" id="priority" />
           </div>
           <div>
             <div>
-              <label for="responsible">Ответственный</label>
-              <input type="text" id="responsible" />
+              <label class="form__label" for="responsible">Ответственный</label>
+              <input class="form__input" type="text" id="responsible" />
               <button type="button">+</button>
               <button type="button">Search</button>
             </div>
             <div>
-              <label for="group">Группа</label>
-              <input type="text" id="group" />
+              <label class="form__label" for="group">Группа</label>
+              <input class="form__input" type="text" id="group" />
               <button type="button">+</button>
               <button type="button">Search</button>
             </div>
           </div>
           <div>
-            <label for="coordinating">Согласующие</label>
-            <input type="text" id="coordinating" />
+            <label class="form__label" for="coordinating">Согласующие</label>
+            <input class="form__input" type="text" id="coordinating" />
             <button type="button">+</button>
             <button type="button">Search</button>
           </div>
           <div>
             <div>
-              <label for="opened">Когда открыто</label>
-              <input type="text" id="opened" />
+              <label class="form__label" for="opened">Когда открыто</label>
+              <input class="form__input" type="text" id="opened" />
               <button type="button">календарь</button>
             </div>
             <div>
-              <label for="whoOpened">Когда создано</label>
-              <input type="text" id="whoOpened" />
+              <label class="form__label" for="whoOpened">Когда создано</label>
+              <input class="form__input" type="text" id="whoOpened" />
               <button type="button">календарь</button>
             </div>
           </div>
           <div>
             <div>
-              <label for="whoOpen">Кем открыто</label>
-              <input type="text" id="whoOpen" />
+              <label class="form__label" for="whoOpen">Кем открыто</label>
+              <input class="form__input" type="text" id="whoOpen" />
               <button type="button">+</button>
               <button type="button">Search</button>
             </div>
             <div>
-              <label for="whoCreate">Кем создано</label>
-              <input type="text" id="whoCreate" />
+              <label class="form__label" for="whoCreate">Кем создано</label>
+              <input class="form__input" type="text" id="whoCreate" />
               <button type="button">+</button>
               <button type="button">Search</button>
             </div>
