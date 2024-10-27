@@ -15,7 +15,40 @@ li {
   list-style: none;
 }
 
-.button, .form__input--buttons-wrapper button, .content__header button, .sidebar__unpin, .sidebar__controls button {
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 1552px;
+}
+@media (min-width: 1920px) {
+  .container__title {
+    min-width: 1888px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    min-width: 1168px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    min-width: 736px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    min-width: 544px;
+  }
+}
+@media (min-width: 320px) {
+  .container {
+    min-width: 288px;
+  }
+}
+
+.button, .form__input--buttons-wrapper button, .content__header button, .sidebar__unpin, .sidebar__controls button, .header__user-settings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,8 +62,12 @@ li {
   border: none;
   background-color: inherit;
 }
+.button:focus, .form__input--buttons-wrapper button:focus, .content__header button:focus, .sidebar__unpin:focus, .sidebar__controls button:focus, .header__user-settings:focus, .button:hover, .form__input--buttons-wrapper button:hover, .content__header button:hover, .sidebar__unpin:hover, .sidebar__controls button:hover, .header__user-settings:hover {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-.button-border, .form__input--buttons-wrapper button, .content__header button, .sidebar__list, .sidebar__unpin, .sidebar__menu--container, .sidebar__search, .sidebar__controls {
+.button-border, .form__input--buttons-wrapper button, .content__header button, .content, .sidebar__unpin, .sidebar__menu--container, .sidebar__search, .sidebar__controls, .header__user-settings {
   border: 1px solid #d5d8dd;
 }
 
@@ -74,8 +111,9 @@ li {
   padding: 6px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  font-size: 14px;
   width: 296px;
+  color: #abb1ba;
 }
 .header__search::before {
   content: "";
@@ -111,17 +149,6 @@ li {
   background: none;
   width: 32px;
   height: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border: 1px solid #d5d8dd;
   border-radius: 4px;
 }
 .header__user-settings img {
@@ -180,6 +207,7 @@ li {
           column-gap: 8px;
   padding: 16px;
   border-left: none;
+  border-right: none;
   position: relative;
 }
 .sidebar__menu--container::before {
@@ -210,9 +238,6 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
-  border-top: none;
-  border-left: none;
-  border-bottom: none;
 }
 .sidebar__item {
   font-size: 14px;
@@ -244,6 +269,32 @@ li {
 
 .content {
   border-top: 1px solid #d5d8dd;
+  border-right: none;
+}
+@media (min-width: 1920px) {
+  .content {
+    min-width: 1584px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .content {
+    min-width: 864px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    min-width: 680px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .content {
+    min-width: 544px;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  .content {
+    min-width: 288px;
+  }
 }
 .content__header {
   display: -webkit-box;
@@ -314,8 +365,36 @@ li {
   font-size: 24px;
   line-height: 1.3333333333;
   color: #2e3238;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
   margin-bottom: 8px;
+}
+@media (min-width: 1920px) {
+  .form__title__title {
+    width: 1584px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .form__title__title {
+    width: 864px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .form__title__title {
+    width: 680px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .form__title__title {
+    width: 544px;
+  }
+}
+@media (min-width: 320px) and (max-width: 575px) {
+  .form__title__title {
+    width: 288px;
+  }
 }
 .form__input--wrapper {
   display: -webkit-box;

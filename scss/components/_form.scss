@@ -10,9 +10,39 @@
     line-height: calc(32 / 24);
     color: #2e3238;
 
-    // white-space: nowrap;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (min-width: 1920px) {
+      &__title {
+        width: 1584px;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1919px) {
+      &__title {
+        width: 864px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      &__title {
+        width: 680px;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+      &__title {
+        width: 544px;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 575px) {
+      &__title {
+        width: 288px;
+      }
+    }
 
     margin: 0;
     margin-bottom: 8px;

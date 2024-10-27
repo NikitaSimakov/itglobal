@@ -1,0 +1,36 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 1552px;
+  @media (min-width: 1920px) {
+    &__title {
+      min-width: 1888px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      min-width: 1168px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      min-width: 736px;
+    }
+  }
+
+  @media (min-width: 576px) {
+    & {
+      min-width: 544px;
+    }
+  }
+
+  @media (min-width: 320px) {
+    & {
+      min-width: 288px;
+    }
+  }
+}

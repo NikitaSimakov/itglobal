@@ -1,14 +1,58 @@
 .main {
   display: flex;
+  // width: 100%;
+
+  // @media (min-width: 1920px) {
+  //   width: 1888px;
+  // }
+
+  // @media (min-width: 1200px) and (max-width: 1919px) {
+  //   width: 1168px;
+  // }
+
+  // @media (min-width: 768px) and (max-width: 1199px) {
+  //   width: 736px;
+  // }
+
+  // @media (min-width: 576px) and (max-width: 767px) {
+  //   width: 544px;
+  // }
+
+  // @media (min-width: 320px) and (max-width: 575px) {
+  //   width: 288px;
+  // }
 }
 .content {
   border-top: 1px solid #d5d8dd;
+  @media (min-width: 1920px) {
+    min-width: 1584px;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1919px) {
+    min-width: 864px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    min-width: 680px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    min-width: 544px;
+  }
+
+  @media (min-width: 320px) and (max-width: 575px) {
+    min-width: 288px;
+  }
+
+  @extend .button-border;
+  border-right: none;
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 16px;
+
     & button {
       height: 32px;
       @extend .button;
@@ -25,6 +69,7 @@
     display: flex;
     column-gap: 16px;
     align-items: center;
+
     h3 {
       font-family: "Montserrat";
       font-weight: 400;
