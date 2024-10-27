@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -30,32 +33,100 @@
       <aside class="sidebar">
         <div class="sidebar__controls">
           <button class="sidebar__toggle" type="button">
-            <img src="" alt="открыть сайдбар" />
+            <img src="./public/icons/sidebar.svg" alt="открыть сайдбар" />
           </button>
           <button class="sidebar__favorites" type="button">
-            <img src="" alt="избранное" />
+            <img src="./public/icons/star.svg" alt="избранное" />
           </button>
         </div>
         <div class="sidebar__menu">
-          <input class="form__input" class="sidebar__search" type="text" name="" placeholder="Поиск по меню" />
-          <button class="sidebar__unpin" type="button">открепить</button>
+          <div class="sidebar__menu--container">
+            <input class="sidebar__search" type="text" name="" placeholder="Поиск по меню" />
+            <button class="sidebar__unpin" type="button">
+              <img src="./public/icons/no-pin.svg" alt="Открепить">
+            </button>
+          </div>
           <ul class="sidebar__list">
-            <li class="sidebar__item">Моя работа</li>
-            <li class="sidebar__item">Структура портала</li>
-            <li class="sidebar__item">Личное расписание</li>
-            <li class="sidebar__item">Отсутствие на рабочем месте</li>
-            <li class="sidebar__item">Портфель услуг</li>
-            <li class="sidebar__item">Дашборды</li>
-            <li class="sidebar__item">Доски задач</li>
-            <li class="sidebar__item">Обращения</li>
-            <li class="sidebar__item">Инциденты</li>
-            <li class="sidebar__item">Проблемы</li>
-            <li class="sidebar__item">Настройки каталогов</li>
-            <li class="sidebar__item">Запросы на обслуживание</li>
-            <li class="sidebar__item">Запросы на изменение</li>
-            <li class="sidebar__item">Управление конфигурациями</li>
-            <li class="sidebar__item">Управление уровнем услуг</li>
-            <li class="sidebar__item">Настройка соответствий</li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Моя работа
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Структура портала
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Личное расписание
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Отсутствие на рабочем месте
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Портфель услуг
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Дашборды
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Доски задач
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Обращения
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Инциденты
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Проблемы
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Настройки каталогов
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Запросы на обслуживание
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Запросы на изменение
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Управление конфигурациями
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Управление уровнем услуг
+              </a>
+              </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="/">
+                <img src="./public/icons/arrow.svg" alt="Стрелка">Настройка соответствий
+              </a>
+              </li>
           </ul>
         </div>
       </aside>
@@ -66,7 +137,7 @@
             <button type="button">Создать</button>
           </div>
           <div class="content__actions">
-            <button type="button">Сохранить</button>
+            <button class="content__actions--save-button" type="button">Сохранить</button>
             <button type="button">Сохранить и выйти</button>
           </div>
         </div>

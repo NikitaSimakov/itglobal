@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+
+  border: none;
+  background-color: inherit;
+}
+
+.button-border {
+  border: 1px solid #d5d8dd;
+}

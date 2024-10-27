@@ -1,53 +1,105 @@
 .sidebar {
   display: flex;
-  width: 336px;
-  background-color: #f0f0f0;
-  padding: 1rem;
-  // height: 100vh;
 
   &__controls {
     display: flex;
     flex-direction: column;
-    height: 40px;
-    justify-content: space-between;
+    @extend .button-border;
+    border-bottom: none;
+    height: 100vh;
 
     button {
-      background: none;
-      border: none;
+      @extend .button;
+      padding: 16px;
+      margin: 12px;
+
+      width: 24px;
+      height: 24px;
+
+      cursor: pointer;
       img {
         height: 20px;
       }
     }
+  }
+  &__search {
+    width: 208px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    @extend .button-border;
+
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    position: relative;
   }
 
   &__menu {
     display: flex;
     flex-direction: column;
 
-    &-search {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+    &--container {
+      display: flex;
+      column-gap: 8px;
+      padding: 16px;
+      @extend .button-border;
+      border-left: none;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 200px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 16px;
+        height: 20px;
+        background: url("../../public/icons/filter.svg") no-repeat center;
+        background-size: contain;
+        z-index: 1;
+      }
     }
+  }
+  &__unpin {
+    @extend .button;
 
-    &__unpin {
-      margin-bottom: 1rem;
+    @extend .button-border;
+    border-radius: 4px;
+
+    padding: 6px;
+
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+    & > img {
+      width: 20px;
+      height: 20px;
     }
   }
   &__list {
     list-style: none;
     padding: 0;
+    margin: 0;
+    @extend .button-border;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+  }
+  &__item {
+    font-size: 14px;
+    &:hover {
+      background-color: #ddd;
+    }
 
-    &__item {
-      padding: 0.5rem 0;
-      font-size: 1rem;
-      color: #333;
+    & > .sidebar__link {
+      color: #2e3238;
+      text-decoration: none;
 
-      &:hover {
-        background-color: #ddd;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      column-gap: 8px;
+      padding: 10px 16px;
     }
   }
 }
