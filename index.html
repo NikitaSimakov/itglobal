@@ -147,67 +147,97 @@
           некоторые поля остаются редактируемыми для агента если он Caller
         </h1>
           <div class="form__row">
-            <label class="form__label" for="theme">Тема</label>
-            <input class="form__input" id="theme" type="text" />
+            <div class="form__input--wrapper">
+              <label class="form__label form__label--red-flag" for="theme">Тема</label>
+              <input class="form__input" id="theme" type="text" />
+            </div>
+            <div class="form__input--wrapper">
             <label class="form__label" for="status">Статус</label>
             <input class="form__input" type="text" id="status" />
           </div>
-          <div>
+          </div>
+          <div class="form__row">
+            <div class="form__input--wrapper">
             <label class="form__label" for="description">Описание</label>
             <input class="form__input" type="text" id="description" />
+          </div>
+          <div class="form__input--wrapper">
             <label class="form__label" for="product">Продукт</label>
             <input class="form__input" type="text" id="product" />
           </div>
-          <div>
-            <label class="form__label" for="notes">Рабочие заметки</label>
+          </div>
+          <div class="form__row">
+            <div class="form__input--wrapper">
+            <label class="form__label form__label--red-flag" for="notes">Рабочие заметки</label>
             <input class="form__input" type="text" id="notes" />
+          </div>
+          <div class="form__input--wrapper">
             <label class="form__label" for="priority">Приоритет</label>
             <input class="form__input" type="text" id="priority" />
           </div>
-          <div>
-            <div>
+          </div>
+          <div class="form__row">
+            <div class="form__input--wrapper">
               <label class="form__label" for="responsible">Ответственный</label>
+              <div class="form__input--buttons-wrapper">
               <input class="form__input" type="text" id="responsible" />
-              <button type="button">+</button>
-              <button type="button">Search</button>
+              <button type="button"><img src="./public/icons/plus.svg" alt=""></button>
+              <button type="button"><img src="./public/icons/search.svg" alt="Search"></button>
             </div>
-            <div>
+            </div>
+            <div class="form__input--wrapper">
               <label class="form__label" for="group">Группа</label>
+              <div class="form__input--buttons-wrapper">
               <input class="form__input" type="text" id="group" />
-              <button type="button">+</button>
-              <button type="button">Search</button>
+              <button type="button"><img src="./public/icons/plus.svg" alt=""></button>
+              <button type="button"><img src="./public/icons/search.svg" alt="Search"></button>
+            </div>
             </div>
           </div>
-          <div>
+          <div class="form__row form__row--one">
+            <label class="form__label" for="comments">Комментарии</label>
+            <input class="form__input" id="comments" type="text">
+          </div>
+          <div class="form__row form__row--one">
             <label class="form__label" for="coordinating">Согласующие</label>
+            <div class="form__input--buttons-wrapper">
             <input class="form__input" type="text" id="coordinating" />
-            <button type="button">+</button>
-            <button type="button">Search</button>
+            <button type="button"><img src="./public/icons/plus.svg" alt=""></button>
+            <button type="button"><img src="./public/icons/search.svg" alt="Search"></button>
           </div>
-          <div>
-            <div>
+          </div>
+          <div class="form__row">
+            <div class="form__input--wrapper">
               <label class="form__label" for="opened">Когда открыто</label>
+              <div class="form__input--buttons-wrapper form__input--buttons-wrapper-without-after">
               <input class="form__input" type="text" id="opened" />
-              <button type="button">календарь</button>
+              <button type="button"><img src="./public/icons/calendar.svg" alt="cale"></button>
             </div>
-            <div>
+            </div>
+            <div class="form__input--wrapper"> 
               <label class="form__label" for="whoOpened">Когда создано</label>
+              <div class="form__input--buttons-wrapper form__input--buttons-wrapper-without-after">
               <input class="form__input" type="text" id="whoOpened" />
-              <button type="button">календарь</button>
+              <button type="button"><img src="./public/icons/calendar.svg" alt="cale"></button>
+            </div>
             </div>
           </div>
-          <div>
-            <div>
+          <div class="form__row">
+            <div class="form__input--wrapper">
               <label class="form__label" for="whoOpen">Кем открыто</label>
+              <div class="form__input--buttons-wrapper">
               <input class="form__input" type="text" id="whoOpen" />
-              <button type="button">+</button>
-              <button type="button">Search</button>
+              <button type="button"><img src="./public/icons/plus.svg" alt=""></button>
+              <button type="button"><img src="./public/icons/search.svg" alt="Search"></button>
             </div>
-            <div>
+            </div>
+            <div class="form__input--wrapper">
               <label class="form__label" for="whoCreate">Кем создано</label>
+              <div class="form__input--buttons-wrapper">
               <input class="form__input" type="text" id="whoCreate" />
-              <button type="button">+</button>
-              <button type="button">Search</button>
+              <button type="button"><img src="./public/icons/plus.svg" alt=""></button>
+              <button type="button"><img src="./public/icons/search.svg" alt="Search"></button>
+            </div>
             </div>
           </div>
           </div>
