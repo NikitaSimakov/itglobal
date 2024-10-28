@@ -18,6 +18,9 @@
       <a href="/" class="header__logo" aria-label="Перейти на главную страницу">
           <img src="./public/icons/mainlogo.svg" alt="SIMPLEONE" class="header__logo-img">
       </a>
+      <button class="header__toggle" type="button">
+        <img src="./public/icons/sidebar.svg" alt="открыть сайдбар" />
+      </button>
       <div class="header__search">
           <input type="text" placeholder="Поиск" class="header__search-input" />
           <div class="header__user">
@@ -131,17 +134,23 @@
         </div>
       </aside>
       <section class="content">
+        <div class="content__header-small">
+          <h3>Подзадачи</h3>
+          <button id="kebab" type="button">
+            <img  src="./public/icons/more-vertical-kebab.svg" alt="кебаб">
+          </button>
+        </div>
         <div class="content__header">
           <div class="content__title">
             <h3>Подзадача</h3>
-            <button type="button">Создать</button>
+            <button type="button" id="openModal">Создать</button>
           </div>
           <div class="content__actions">
             <button class="content__actions--save-button" type="button">Сохранить</button>
             <button type="button">Сохранить и выйти</button>
           </div>
         </div>
-        <form class="form">
+        <form class="form" id="taskForm">
         <h1 class="form__title">
           STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто
           некоторые поля остаются редактируемыми для агента если он Caller
@@ -244,5 +253,23 @@
         </form>
       </section>
     </main>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="modal__controls">
+          <h2>Подзадача</h2>
+          <button class="modal__controls--xs-cancel-button" id="closeModal"><img src="./public/icons/close-x.svg" alt="Закрыть"></button>
+          <div class="modal__controls--buttons high">
+          <button class="modal__controls--cancel-button" id="closeModal">Отменить</button>
+          <button class="modal__controls--save-button" type="button" id="saveModal">Сохранить</button>
+        </div>
+        </div>
+          <form id="modalForm"></form>
+          <div class="modal__controls--buttons low">
+            <button class="modal__controls--cancel-button" id="closeModal">Отменить</button>
+            <button class="modal__controls--save-button" type="button" id="saveModal">Сохранить</button>
+          </div>
+      </div>
+  </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>

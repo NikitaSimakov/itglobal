@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: 16px;
   margin: 0 16px;
+  padding-bottom: 32px;
   &__title {
     font-family: "Montserrat";
     font-weight: 600;
@@ -55,9 +56,12 @@
   }
   &__row {
     display: flex;
-    // flex-wrap: wrap;
     width: 100%;
     column-gap: 16px;
+    @media (max-width: 991px) {
+      flex-direction: column;
+      row-gap: 16px;
+    }
     &--one {
       flex-direction: column;
       row-gap: 8px;
@@ -107,5 +111,4 @@
   &__input--buttons-wrapper-without-after::after {
     content: none;
   }
-  // width: calc(50% - 16px);
 }

@@ -1,0 +1,110 @@
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(11, 12, 14, 0.4);
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & button {
+      padding: 6px 12px;
+    }
+  }
+  .modal__controls--xs-cancel-button {
+    @extend .button, .button-border;
+    width: 32px;
+    height: 32px;
+
+    padding: 6px 12px;
+    border-radius: 4px;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .modal__controls--buttons {
+    &.low {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 16px;
+      gap: 16px;
+      & button {
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    &.high {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__controls--save-button {
+    @extend .button-border;
+    background-color: #0078cf;
+    color: #fff;
+    border: none;
+    &:hover,
+    &:focus {
+      background-color: #0056b3;
+    }
+  }
+  &__controls--cancel-button {
+    @extend .button-border;
+    border-radius: 4px;
+    background-color: inherit;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+
+  max-height: 100vh;
+  overflow-y: auto;
+
+  @media screen and (min-width: 768px) {
+    max-height: 90vh;
+  }
+
+  & h2 {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+  }
+  & form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  & .form__row {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 716px;
+  }
+  @media screen and (min-width: 1180px) {
+    width: 800px;
+  }
+}

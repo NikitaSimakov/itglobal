@@ -8,9 +8,25 @@
   &__logo {
     display: flex;
     align-items: center;
-
+    @media (max-width: 767px) {
+      display: none;
+    }
     &-img {
       height: 24px;
+    }
+  }
+  &__toggle {
+    @extend .button, .button-border;
+    border-radius: 4px;
+
+    padding: 16px;
+
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
     }
   }
 
@@ -30,6 +46,9 @@
       width: 296px;
 
       color: #abb1ba;
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
     &::before {
       content: "";
@@ -56,6 +75,9 @@
 
     &-name {
       font-size: 1rem;
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
 
     &-settings {

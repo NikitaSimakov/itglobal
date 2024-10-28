@@ -7,6 +7,9 @@
     @extend .button-border;
     border-bottom: none;
     height: 100vh;
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     button {
       @extend .button;
@@ -34,8 +37,11 @@
   }
 
   &__menu {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--container {
       display: flex;
@@ -84,7 +90,8 @@
   }
   &__item {
     font-size: 14px;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #ddd;
     }
 
