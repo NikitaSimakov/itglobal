@@ -1,5 +1,15 @@
 const header = document.querySelector('.content__header');
 const form = document.querySelector('.form');
+const openModalBtn = document.getElementById('openModal');
+const body = document.body;
+const modal = document.getElementById('modal');
+const modalForm = document.getElementById('modalForm');
+const closeModalBtn = document.getElementById('closeModal');
+const closeModalXsBtn = document.getElementById('closeModalXs');
+const closeModalLowBtn = document.getElementById('closeModalLow');
+const contentHeader = document.querySelector('.content__header');
+const kebabBtn = document.getElementById('kebab');
+const createBtn = document.createElement("button");
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
@@ -9,15 +19,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const openModalBtn = document.getElementById('openModal');
-const body = document.body;
-const modal = document.getElementById('modal');
-const modalForm = document.getElementById('modalForm');
-const closeModalBtn = document.getElementById('closeModal');
-const contentHeader = document.querySelector('.content__header');
-const kebabBtn = document.getElementById('kebab');
-const createBtn = document.createElement("button");
-
 kebabBtn.addEventListener('click', () => {
   createBtn.id = "create";
   createBtn.className = 'createBtn'
@@ -25,7 +26,6 @@ kebabBtn.addEventListener('click', () => {
 
   kebabBtn.replaceWith(createBtn);
 })
-
 
 const openModal = () => {
   const form = document.getElementById('taskForm');
@@ -36,8 +36,6 @@ const openModal = () => {
   createBtn.replaceWith(kebabBtn);
 }
 
-openModalBtn.addEventListener('click', openModal);
-createBtn.addEventListener('click', openModal)
 
 const closeModal = () => {
   modal.style.display = 'none';
@@ -45,7 +43,11 @@ const closeModal = () => {
   contentHeader.style.position = 'sticky';
 }
 
+openModalBtn.addEventListener('click', openModal);
+createBtn.addEventListener('click', openModal)
 closeModalBtn.addEventListener('click', closeModal);
+closeModalXsBtn.addEventListener('click', closeModal);
+closeModalLowBtn.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
