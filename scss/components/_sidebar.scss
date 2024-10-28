@@ -6,7 +6,7 @@
     flex-direction: column;
     @extend .button-border;
     border-bottom: none;
-    height: 100vh;
+    height: 100%;
     @media (max-width: 767px) {
       display: none;
     }

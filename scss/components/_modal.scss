@@ -50,13 +50,15 @@
       }
     }
     &.high {
+      display: flex;
+      gap: 4px;
       @media screen and (max-width: 767px) {
         display: none;
       }
     }
   }
   &__controls--save-button {
-    @extend .button-border;
+    @extend .button-border, .button;
     background-color: #0078cf;
     color: #fff;
     border: none;
@@ -66,7 +68,8 @@
     }
   }
   &__controls--cancel-button {
-    @extend .button-border;
+    @extend .button-border, .button;
+    display: inline-block;
     border-radius: 4px;
     background-color: inherit;
   }

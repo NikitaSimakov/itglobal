@@ -48,7 +48,7 @@ li {
   }
 }
 
-.button, .modal .modal__controls--xs-cancel-button, .form__input--buttons-wrapper button, .content .createBtn, .content__header button, .content__header-small button, .sidebar__unpin, .sidebar__controls button, .header__user-settings, .header__toggle {
+.button, .modal__controls--cancel-button, .modal__controls--save-button, .modal .modal__controls--xs-cancel-button, .form__input--buttons-wrapper button, .content .createBtn, .content__header button, .content__header-small button, .sidebar__unpin, .sidebar__controls button, .header__user-settings, .header__toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +63,7 @@ li {
   background-color: inherit;
   cursor: pointer;
 }
-.button:focus, .modal .modal__controls--xs-cancel-button:focus, .form__input--buttons-wrapper button:focus, .content .createBtn:focus, .content__header button:focus, .content__header-small button:focus, .sidebar__unpin:focus, .sidebar__controls button:focus, .header__user-settings:focus, .header__toggle:focus, .button:hover, .modal .modal__controls--xs-cancel-button:hover, .form__input--buttons-wrapper button:hover, .content .createBtn:hover, .content__header button:hover, .content__header-small button:hover, .sidebar__unpin:hover, .sidebar__controls button:hover, .header__user-settings:hover, .header__toggle:hover {
+.button:focus, .modal__controls--cancel-button:focus, .modal__controls--save-button:focus, .modal .modal__controls--xs-cancel-button:focus, .form__input--buttons-wrapper button:focus, .content .createBtn:focus, .content__header button:focus, .content__header-small button:focus, .sidebar__unpin:focus, .sidebar__controls button:focus, .header__user-settings:focus, .header__toggle:focus, .button:hover, .modal__controls--cancel-button:hover, .modal__controls--save-button:hover, .modal .modal__controls--xs-cancel-button:hover, .form__input--buttons-wrapper button:hover, .content .createBtn:hover, .content__header button:hover, .content__header-small button:hover, .sidebar__unpin:hover, .sidebar__controls button:hover, .header__user-settings:hover, .header__toggle:hover {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -197,7 +197,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   border-bottom: none;
-  height: 100vh;
+  height: 100%;
 }
 @media (max-width: 767px) {
   .sidebar__controls {
@@ -640,6 +640,12 @@ li {
     display: none;
   }
 }
+.modal .modal__controls--buttons.high {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
 @media screen and (max-width: 767px) {
   .modal .modal__controls--buttons.high {
     display: none;
@@ -654,6 +660,7 @@ li {
   background-color: #0056b3;
 }
 .modal__controls--cancel-button {
+  display: inline-block;
   border-radius: 4px;
   background-color: inherit;
 }
